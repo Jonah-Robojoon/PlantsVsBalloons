@@ -10,56 +10,55 @@ Datum: 8/09/2025
 
 Titel: Plants vr piggies
 
-Elevator pitch, maximaal twee zinnen: Plants, omdat de upgrade mechanic grappig kan zijn met plants die groeien. piggies omdat ze cute en recognizable zijn
+Elevator pitch, maximaal twee zinnen:
+Plants, because the mechanic makes sense with the upgrade mechanic. piggies because they give a comedic effect
+
 Beschrijf kort wat jouw game is en waarom het leuk is om te spelen:
-Het is addicting om te zien hoe ver je kan gaan en hoeveel geld je kan krijgen
+its addicting to see how far you can survive and how much money you can get.
 
 ## 2\. Wat maakt jouw tower defense uniek
 
 Beschrijf in één of twee zinnen wat jouw game onderscheidt van een standaard tower defense. Denk aan iets dat de speler op een nieuwe manier laat nadenken of spelen:
-iedere ronde kan je een kaart kiezen bijvoorbeeld extra damage voor alle plants.
+every round you can choose a card for example extra dammage for all plants.
 
 ## 3\. Schets van je level en UI
 
-Maak een schets op papier of digitaal en voeg deze afbeelding toe aan je repository. Voeg in deze sectie de afbeelding in.
-
-Je schets bevat minimaal:
-
-1. Het pad waar de vijanden over lopen met beginpunt en eindpunt.
-2. De plaatsen waar torens gebouwd kunnen worden.
-3. De locatie van de basis of goal die verdedigd moet worden.
-4. De UI onderdelen geld, wave teller, levens, startknop en pauzeknop.
-5. Een legenda met symbolen of kleuren voor torens, vijanden, pad, basis en UI.
+![screenshot](Plan.png)
 
 ## 4\. Torens
 
 Toren 1 naam, bereik, schade, unieke eigenschap.
+Plant, hits close, little damage, first tower
 
 Toren 2 naam, bereik, schade, unieke eigenschap.
+cactus, sees far, mid damage, shoots homing thorns
 
-Eventuele extra torens:
+Eventuele extra torens: Wip
 
 ## 5\. Vijanden
 
 Vijand 1 naam, snelheid, levens, speciale eigenschap.
+pink piggie, slow speed, one life, first piggie
 
 Vijand 2 naam, snelheid, levens, speciale eigenschap.
+red piggie, medium speed, one life, splits into 2 pink piggies
 
-Eventuele extra vijanden:
+Eventuele extra vijanden: Wip
 
 ## 6\. Gameplay loop
 
 Beschrijf in drie tot vijf stappen wat de speler steeds doet.
-1.
+1. buy tower
 
-2. 
-3. 
-4. 
-5. 
+2. kill enemies
+3. get money
+4. upgrade tower
+5. get extra card
 
 ## 7\. Progressie
 
 Leg uit hoe het spel moeilijker wordt naarmate de waves doorgaan. Denk aan sterkere vijanden, kortere tussenpozen, hogere kosten of lagere beloningen.
+towers get more prized the more of that type you have. the piggies get more strong and faster the further you go
 
 ## 8\. Risico’s en oplossingen volgens PIO
 
@@ -80,15 +79,15 @@ Leg uit hoe het spel moeilijker wordt naarmate de waves doorgaan. Denk aan sterk
 
 Schrijf per sprint welke mechanics jij oplevert in de build. Denk aan voorbeelden zoals vijandbeweging over een pad, torens plaatsen, doel kiezen en schieten, waves starten, UI voor geld en levens, upgrades, jouw unieke feature.
 
-Sprint 1 mechanics:
+Sprint 1 mechanics: Piggies movement and tower placement
 
-Sprint 2 mechanics:
+Sprint 2 mechanics: towers can shoot and upgrade system
 
-Sprint 3 mechanics:
+Sprint 3 mechanics: wave system and economy
 
-Sprint 4 mechanics:
+Sprint 4 mechanics: card mechanic and piggies can have special abilities
 
-Sprint 5 mechanics:
+Sprint 5 mechanics: polishing
 
 
 
