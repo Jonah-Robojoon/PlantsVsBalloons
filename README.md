@@ -94,6 +94,8 @@ Sprint 5 mechanics: polishing
 ## 10\. Inspiratie
 
 Noem een bestaande tower defense game die jou inspireert en wat je daarvan meeneemt of juist vermijdt.
+Bloons TD6 upgrade mechanic and tower placement
+Plants Vr Zombies i dont want the linear gameplay that it can have sometimes
 
 ## 11\. Technisch ontwerp mini
 
@@ -113,24 +115,24 @@ Voorbeeld ingevuld bij 11.1 Vijandbeweging over het pad
 
 ### 11.1 Vijandbeweging over het pad
 
-* Keuze:
-* Risico:
-* Oplossing:
-* Acceptatie:
+* Keuze: go to a b c then to end
+* Risico: enemy can get stuck
+* Oplossing: set a range of when the enemy is at a point go to next
+* Acceptatie: 30 enemy's can walk over a point and all do dammage to the end
 
 
 
 ### 11.2 Doel kiezen en schieten
 
-* Keuze:
-* Risico:
-* Oplossing:
-* Acceptatie:
+* Keuze: calculate where the pig and the thorn should be and target there
+* Risico: the thorn is 100% precise
+* Oplossing: give a bit of randomness to where it shoots
+* Acceptatie: fire a shot 20 times and see how many make it. also the closer the piggy is the more accurate it should be
 
 ### 11.3 Waves en spawnen
 
-* Keuze:
-* Risico:
+* Keuze: spawn the piggies with a set dalay
+* Risico: i dont know
 * Oplossing:
 * Acceptatie:
 
@@ -138,7 +140,7 @@ Voorbeeld ingevuld bij 11.1 Vijandbeweging over het pad
 
 ### 11.4 Economie en levens
 
-* Keuze:
+* Keuze: give the player money based on what type and how many enemys are killed
 * Risico:
 * Oplossing:
 * Acceptatie:
