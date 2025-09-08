@@ -8,10 +8,10 @@ Datum: 8/09/2025
 
 ## 1\. Titel en elevator pitch
 
-Titel: Plants vr piggies
+Titel: Plants vr balloons
 
 Elevator pitch, maximaal twee zinnen:
-Plants, because the mechanic makes sense with the upgrade mechanic. piggies because they give a comedic effect
+Plants, because the mechanic makes sense with the upgrade mechanic. balloons because plastic and rubber in nature us not good so the plants are stopping them
 
 Beschrijf kort wat jouw game is en waarom het leuk is om te spelen:
 its addicting to see how far you can survive and how much money you can get.
@@ -38,10 +38,10 @@ Eventuele extra torens: Wip
 ## 5\. Vijanden
 
 Vijand 1 naam, snelheid, levens, speciale eigenschap.
-pink piggie, slow speed, one life, first piggie
+yellow balloon, slow speed, one life, first baloon
 
 Vijand 2 naam, snelheid, levens, speciale eigenschap.
-red piggie, medium speed, one life, splits into 2 pink piggies
+red baloon, medium speed, one life, splits into 2 yellow balloon
 
 Eventuele extra vijanden: Wip
 
@@ -58,7 +58,7 @@ Beschrijf in drie tot vijf stappen wat de speler steeds doet.
 ## 7\. Progressie
 
 Leg uit hoe het spel moeilijker wordt naarmate de waves doorgaan. Denk aan sterkere vijanden, kortere tussenpozen, hogere kosten of lagere beloningen.
-towers get more prized the more of that type you have. the piggies get more strong and faster the further you go
+towers get more prized the more of that type you have. the balloon get more strong and faster the further you go
 
 ## 8\. Risico’s en oplossingen volgens PIO
 
@@ -79,7 +79,7 @@ towers get more prized the more of that type you have. the piggies get more stro
 
 Schrijf per sprint welke mechanics jij oplevert in de build. Denk aan voorbeelden zoals vijandbeweging over een pad, torens plaatsen, doel kiezen en schieten, waves starten, UI voor geld en levens, upgrades, jouw unieke feature.
 
-Sprint 1 mechanics: Piggies movement and tower placement
+Sprint 1 mechanics: balloon movement and tower placement
 
 Sprint 2 mechanics: towers can shoot and upgrade system
 
@@ -124,14 +124,14 @@ Voorbeeld ingevuld bij 11.1 Vijandbeweging over het pad
 
 ### 11.2 Doel kiezen en schieten
 
-* Keuze: calculate where the pig and the thorn should be and target there
+* Keuze: calculate where the balloon and the thorn should be and target there
 * Risico: the thorn is 100% precise
 * Oplossing: give a bit of randomness to where it shoots
 * Acceptatie: fire a shot 20 times and see how many make it. also the closer the piggy is the more accurate it should be
 
 ### 11.3 Waves en spawnen
 
-* Keuze: spawn the piggies with a set dalay
+* Keuze: spawn the balloons with a set dalay
 * Risico: i dont know
 * Oplossing:
 * Acceptatie:
