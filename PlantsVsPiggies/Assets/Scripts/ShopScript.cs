@@ -81,9 +81,11 @@ public class ShopScript : MonoBehaviour
         isDragging = false;
         // Instantiate shovel animation
         
-        if (spawnedFlower.GetComponent<Collider2D>() )
+        if (spawnedFlower.GetComponent<collisionCheckerScript>().collisions > 0)
         {
-            
+            Destroy(spawnedFlower);
+            spawnedFlower = null;
+            return;
         }
 
         GameObject shovelInst = Instantiate(shovelAnim, spawnedFlower.transform.position + new Vector3(0, -0.5f, 0), Quaternion.identity);
