@@ -6,11 +6,14 @@ using UnityEngine;
 public class balloonMovementScript : MonoBehaviour
 {
     [SerializeField] private GameObject popEffect;
+    [SerializeField] private GameObject popBalloon;
+    [SerializeField] private bool RedBalloon = false;
 
     public List<Transform> myWaypoints;
     public float myWaypointDistance = 0;
-    private int currentWaypointIndex = 0;
+    public int currentWaypointIndex = 0;
     public float speed = 1f;
+    public int BalloonID;
 
     // Update is called once per frame
     void Update()
@@ -37,6 +40,17 @@ public class balloonMovementScript : MonoBehaviour
     public void PopBalloon()
     {
         Instantiate(popEffect, transform.position, Quaternion.identity);
+        
+        if (!RedBalloon)
+        {
+            GameObject currentObject = Instantiate(popBalloon, transform.position, Quaternion.identity);
+            var movementScript = currentObject.GetComponent<balloonMovementScript>();
+
+            movementScript.myWaypoints = myWaypoints;
+            movementScript.currentWaypointIndex = currentWaypointIndex;
+            movementScript.myWaypointDistance = myWaypointDistance;
+            movementScript.BalloonID = BalloonID;
+        }
         Destroy(gameObject);
     }
 }

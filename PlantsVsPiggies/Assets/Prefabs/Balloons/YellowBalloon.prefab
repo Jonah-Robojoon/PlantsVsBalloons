@@ -106,8 +106,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   popEffect: {fileID: 2993554477268498644, guid: 635833fcef97d904a863bcad393ee823, type: 3}
+  popBalloon: {fileID: 0}
+  RedBalloon: 1
   myWaypoints: []
   myWaypointDistance: 0
+  currentWaypointIndex: 0
   speed: 3
 --- !u!58 &-8872587145700419783
 CircleCollider2D:

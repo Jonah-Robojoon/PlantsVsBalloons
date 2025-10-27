@@ -5,7 +5,10 @@ public class gameManagerScript : MonoBehaviour
 {
     [SerializeField] private List<Transform> waypoints;
     [SerializeField] private GameObject RedballoonPrefab;
+    [SerializeField] private GameObject YellowballoonPrefab;
     [SerializeField] private Transform spawnPoint;
+
+    private int BalloonID = 0;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -17,15 +20,20 @@ public class gameManagerScript : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            
-            GameObject currentObject = Instantiate(RedballoonPrefab, spawnPoint.position, Quaternion.identity);
+            BalloonID++;
+            GameObject currentObject = Instantiate(YellowballoonPrefab, spawnPoint.position, Quaternion.identity);
             var movementScript = currentObject.GetComponent<balloonMovementScript>();
             movementScript.myWaypoints = waypoints;
+            movementScript.BalloonID = BalloonID;
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            
+            BalloonID++;
+            GameObject currentObject = Instantiate(RedballoonPrefab, spawnPoint.position, Quaternion.identity);
+            var movementScript = currentObject.GetComponent<balloonMovementScript>();
+            movementScript.myWaypoints = waypoints;
+            movementScript.BalloonID = BalloonID;
         }
     }
 }

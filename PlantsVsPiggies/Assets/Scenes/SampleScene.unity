@@ -472,7 +472,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.838397, y: 0.42074817, z: -0.022007002}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1026,7 +1026,8 @@ MonoBehaviour:
   - {fileID: 187955538}
   - {fileID: 1035521739}
   - {fileID: 1212860882}
-  balloonPrefab: {fileID: 7818592149638843806, guid: b78ed0e2f90ac234bbc74fabe81f910b, type: 3}
+  RedballoonPrefab: {fileID: 2873446474837286915, guid: fc84c2a9d5e96d3449b03cd34e2c9605, type: 3}
+  YellowballoonPrefab: {fileID: 7818592149638843806, guid: b78ed0e2f90ac234bbc74fabe81f910b, type: 3}
   spawnPoint: {fileID: 784267030}
 --- !u!1 &879007819
 GameObject:
