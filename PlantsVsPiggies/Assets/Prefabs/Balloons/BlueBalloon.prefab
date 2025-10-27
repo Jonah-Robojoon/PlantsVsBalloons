@@ -104,11 +104,13 @@ MonoBehaviour:
   popEffect: {fileID: 5191381407509823050, guid: 96186439c1c56b2458fb5d9d04b885d2, type: 3}
   popBalloon: {fileID: 7818592149638843806, guid: b78ed0e2f90ac234bbc74fabe81f910b, type: 3}
   RedBalloon: 0
+  economyScript: {fileID: 0}
   myWaypoints: []
   myWaypointDistance: 0
   currentWaypointIndex: 0
   speed: 2
   BalloonID: 0
+  balloonWorth: 2
 --- !u!58 &8012226323523778832
 CircleCollider2D:
   m_ObjectHideFlags: 0

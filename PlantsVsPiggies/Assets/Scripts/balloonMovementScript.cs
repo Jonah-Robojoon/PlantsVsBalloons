@@ -8,12 +8,14 @@ public class balloonMovementScript : MonoBehaviour
     [SerializeField] private GameObject popEffect;
     [SerializeField] private GameObject popBalloon;
     [SerializeField] private bool RedBalloon = false;
+    [SerializeField] private EconomyScript economyScript;
 
     public List<Transform> myWaypoints;
     public float myWaypointDistance = 0;
     public int currentWaypointIndex = 0;
     public float speed = 1f;
     public int BalloonID;
+    [SerializeField] int balloonWorth = 1;
 
     // Update is called once per frame
     void Update()
@@ -51,6 +53,8 @@ public class balloonMovementScript : MonoBehaviour
             movementScript.myWaypointDistance = myWaypointDistance;
             movementScript.BalloonID = BalloonID;
         }
+
+        FindAnyObjectByType<EconomyScript>().Coins += balloonWorth;
         Destroy(gameObject);
     }
 }

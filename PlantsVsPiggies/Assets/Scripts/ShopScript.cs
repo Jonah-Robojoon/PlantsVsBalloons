@@ -1,19 +1,23 @@
-using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.EventSystems;
-using System.Collections.Generic;
 using System.Collections;
+using System.Collections.Generic;
+using System.Diagnostics;
+using TMPro;
+using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 
 public class ShopScript : MonoBehaviour
 {
     [SerializeField] private GameObject shovelAnim;
+    [SerializeField] private EconomyScript economyScript;
 
     [System.Serializable]
 
     public struct FlowerButtonData
     {
         public Button button;
+        public int price;
         public GameObject flowerPrefab;
         public GameObject flowerToPlacePrefab;
     }
@@ -28,7 +32,8 @@ public class ShopScript : MonoBehaviour
     {
         foreach (var flowerButton in flowerButtons)
         {
-            AddEventTriggers(flowerButton.button, flowerButton.flowerPrefab, flowerButton.flowerToPlacePrefab);
+            flowerButton.button.GetComponentInChildren<TextMeshProUGUI>().text = flowerButton.price.ToString() + "$";
+            AddEventTriggers(flowerButton.button, flowerButton.price, flowerButton.flowerPrefab, flowerButton.flowerToPlacePrefab);
         }
     }
 
@@ -43,7 +48,7 @@ public class ShopScript : MonoBehaviour
         }
     }
 
-    private void AddEventTriggers(Button button, GameObject flowerPrefab, GameObject flowerToPlacePrefab)
+    private void AddEventTriggers(Button button, int price, GameObject flowerPrefab, GameObject flowerToPlacePrefab)
     {
         EventTrigger trigger = button.gameObject.GetComponent<EventTrigger>();
         if (trigger == null)
@@ -54,7 +59,7 @@ public class ShopScript : MonoBehaviour
         {
             eventID = EventTriggerType.PointerDown
         };
-        pointerDownEntry.callback.AddListener((data) => { OnFlowerButtonDown(flowerPrefab, flowerToPlacePrefab); });
+        pointerDownEntry.callback.AddListener((data) => { OnFlowerButtonDown(flowerPrefab, flowerToPlacePrefab, price); });
         trigger.triggers.Add(pointerDownEntry);
 
         // Pointer Up
@@ -62,32 +67,40 @@ public class ShopScript : MonoBehaviour
         {
             eventID = EventTriggerType.PointerUp
         };
-        pointerUpEntry.callback.AddListener((data) => { OnFlowerButtonUp(); });
+        pointerUpEntry.callback.AddListener((data) => { OnFlowerButtonUp(price); });
         trigger.triggers.Add(pointerUpEntry);
     }
 
-    private void OnFlowerButtonDown(GameObject flowerPrefab, GameObject flowerToPlacePrefab)
+    private void OnFlowerButtonDown(GameObject flowerPrefab, GameObject flowerToPlacePrefab, int price)
     {
-        if (spawnedFlower == null)
+        if (economyScript.Coins >= price)
         {
-            spawnedFlower = Instantiate(flowerPrefab);
-            flowerToPlace = flowerToPlacePrefab;
+            if (spawnedFlower == null)
+            {
+                spawnedFlower = Instantiate(flowerPrefab);
+                flowerToPlace = flowerToPlacePrefab;
+            }
+            isDragging = true;
         }
-        isDragging = true;
     }
 
-    private void OnFlowerButtonUp()
+    private void OnFlowerButtonUp(int price)
     {
         isDragging = false;
         // Instantiate shovel animation
-        
+
+        if (spawnedFlower == null)
+        {
+            return;
+        }
+
         if (spawnedFlower.GetComponent<collisionCheckerScript>().collisions > 0)
         {
             Destroy(spawnedFlower);
             spawnedFlower = null;
             return;
         }
-
+        economyScript.Coins -= price;
         GameObject shovelInst = Instantiate(shovelAnim, spawnedFlower.transform.position + new Vector3(0, -0.5f, 0), Quaternion.identity);
 
         // Start coroutine to handle delayed placement
