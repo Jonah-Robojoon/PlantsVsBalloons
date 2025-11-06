@@ -1,6 +1,5 @@
 using NUnit.Framework;
 using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class balloonMovementScript : MonoBehaviour
@@ -9,6 +8,7 @@ public class balloonMovementScript : MonoBehaviour
     [SerializeField] private GameObject popBalloon;
     [SerializeField] private bool RedBalloon = false;
     [SerializeField] private EconomyScript economyScript;
+    [SerializeField] private int livesDamage = 5;
 
     public List<Transform> myWaypoints;
     public float myWaypointDistance = 0;
@@ -27,6 +27,7 @@ public class balloonMovementScript : MonoBehaviour
         Vector3 previousPosition = transform.position;
         transform.position = Vector3.MoveTowards(transform.position, targetWaypoint.position, speed * Time.deltaTime);
 
+
         // Increase myWaypointProcentage by the distance moved this frame
         myWaypointDistance += Vector3.Distance(previousPosition, transform.position);
 
@@ -35,6 +36,14 @@ public class balloonMovementScript : MonoBehaviour
 
         if (Vector3.Distance(transform.position, targetWaypoint.position) < 0.01f)
         {
+            if (currentWaypointIndex == myWaypoints.Count - 1)
+            {
+                // Reached the final waypoint
+                FindAnyObjectByType<EconomyScript>().Lives -= livesDamage;
+                Destroy(gameObject);
+                return;
+            }
+
             currentWaypointIndex = (currentWaypointIndex + 1) % myWaypoints.Count;
         }
     }

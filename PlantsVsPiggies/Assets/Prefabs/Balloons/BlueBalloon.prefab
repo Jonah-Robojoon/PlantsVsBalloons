@@ -105,6 +105,7 @@ MonoBehaviour:
   popBalloon: {fileID: 7818592149638843806, guid: b78ed0e2f90ac234bbc74fabe81f910b, type: 3}
   RedBalloon: 0
   economyScript: {fileID: 0}
+  livesDamage: 15
   myWaypoints: []
   myWaypointDistance: 0
   currentWaypointIndex: 0

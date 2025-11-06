@@ -4,16 +4,18 @@ using UnityEngine;
 public class EconomyScript : MonoBehaviour
 {
     [SerializeField] private GameObject coinText;
+    [SerializeField] private GameObject healthText;
     [SerializeField] private int StartingMoney = 10;
     [SerializeField] private int startingHealth = 100;
-    private int Health;
+    private int health;
     private int coins;
 
     private void Start()
     {
         Coins = StartingMoney;
-        Health = startingHealth;
+        health = startingHealth;
         coinText.GetComponent<TextMeshProUGUI>().text = Coins.ToString();
+        healthText.GetComponent<TextMeshProUGUI>().text = "Lives " + Lives.ToString();
     }
 
     public int Coins
@@ -27,9 +29,20 @@ public class EconomyScript : MonoBehaviour
         }
     }
 
+    public int Lives
+    {
+        get { return health; }
+        set
+        {
+            health =+ value;
+
+            healthText.GetComponent<TextMeshProUGUI>().text = "Lives " + health.ToString();
+        }
+    }
+
     private void Update()
     {
-        if (Health <= 0)
+        if (health <= 0)
         {
             Debug.Log("Game Over");
         }
