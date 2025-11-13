@@ -44,7 +44,7 @@ public class EconomyScript : MonoBehaviour
     {
         if (health <= 0)
         {
-            Debug.Log("Game Over");
+            Application.Quit();
         }
     }
 }
