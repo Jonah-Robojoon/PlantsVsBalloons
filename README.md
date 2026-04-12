@@ -2,154 +2,69 @@ Build: ![BUILD](Build)
 
 # Sprint 0 - Game Design Document : Tower Defense
 
-Naam: Jonah Luijnenbrug
-
-Klas: SD2B
+Name: Jonah Luijnenbrug
 
 Datum: 8/09/2025
 
-## 1\. Titel en elevator pitch
+## 1\. Title and elevator pitch
 
 Titel: Plants vr balloons
 
-Elevator pitch, maximaal twee zinnen:
+Elevator pitch:
 Plants, because the mechanic makes sense with the upgrade mechanic. balloons because plastic and rubber in nature us not good so the plants are stopping them
 
-Beschrijf kort wat jouw game is en waarom het leuk is om te spelen:
+Desctibe what your game is, and what makes it so special:
 its addicting to see how far you can survive and how much money you can get.
 
-## 2\. Wat maakt jouw tower defense uniek
+## 2\. Whats uniqe in your game
 
-Beschrijf in één of twee zinnen wat jouw game onderscheidt van een standaard tower defense. Denk aan iets dat de speler op een nieuwe manier laat nadenken of spelen:
-every round you can choose a card for example extra dammage for all plants.
+every round you can choose a card for example extra dammage for all plants.  (Got scrapped due to time)
 
-## 3\. Schets van je level en UI
+## 3\. Draw the vision for your game
 
 ![screenshot](Plan.png)
 
-## 4\. Torens
+## 4\. Towers
 
-Toren 1 naam, bereik, schade, unieke eigenschap.
+Tower 1 attributes
 Plant, hits close, little damage, first tower
 
-Toren 2 naam, bereik, schade, unieke eigenschap.
+Tower 2 attributes
 cactus, sees far, mid damage, shoots homing thorns
 
-Eventuele extra torens: Wip
+## 5\. Enemies
 
-## 5\. Vijanden
-
-Vijand 1 naam, snelheid, levens, speciale eigenschap.
+Enemy 1 attributes
 yellow balloon, slow speed, one life, first baloon
 
-Vijand 2 naam, snelheid, levens, speciale eigenschap.
+Enemy 2 attributes
 red baloon, medium speed, one life, splits into 2 yellow balloon
-
-Eventuele extra vijanden: Wip
 
 ## 6\. Gameplay loop
 
-Beschrijf in drie tot vijf stappen wat de speler steeds doet.
 1. buy tower
-
 2. kill enemies
 3. get money
 4. upgrade tower
 5. get extra card
 
-## 7\. Progressie
+## 7\. Progression
 
-Leg uit hoe het spel moeilijker wordt naarmate de waves doorgaan. Denk aan sterkere vijanden, kortere tussenpozen, hogere kosten of lagere beloningen.
+Explain the progression in yoir game
 towers get more prized the more of that type you have. the balloon get more strong and faster the further you go
 
-## 8\. Risico’s en oplossingen volgens PIO
+## 8\. Insparation
 
-* Probleem 1:
-* Impact:
-* Oplossing:
-* Probleem 2:
-* Impact:
-* Oplossing:
-
-
-
-* Probleem 3:
-* Impact:
-* Oplossing:
-
-## 9\. Planning per sprint en mechanics
-
-Schrijf per sprint welke mechanics jij oplevert in de build. Denk aan voorbeelden zoals vijandbeweging over een pad, torens plaatsen, doel kiezen en schieten, waves starten, UI voor geld en levens, upgrades, jouw unieke feature.
-
-Sprint 1 mechanics: balloon movement and tower placement
-
-Sprint 2 mechanics: towers can shoot and upgrade system
-
-Sprint 3 mechanics: wave system and economy
-
-Sprint 4 mechanics: card mechanic and piggies can have special abilities
-
-Sprint 5 mechanics: polishing
-
-
-
-## 10\. Inspiratie
-
-Noem een bestaande tower defense game die jou inspireert en wat je daarvan meeneemt of juist vermijdt.
 Bloons TD6 upgrade mechanic and tower placement
 Plants Vr Zombies i dont want the linear gameplay that it can have sometimes
 
-## 11\. Technisch ontwerp mini
+## 9\. Technisch ontwerp mini
 
-Lees dit korte voorbeeld en vul daarna jouw eigen keuzes in.
+Explain some of your mechanics and name any problem you came across
 
-Voorbeeld ingevuld bij 11.1 Vijandbeweging over het pad
+### 9.1 Choose baloon and shoot
 
-* Keuze:
-  Vijanden volgen punten A, B, C en daarna de goal.
-* Risico:
-  Een vijand loopt een punt voorbij of blijft hangen.
-* Oplossing:
-  Als de vijand dichtbij genoeg is kiest hij het volgende punt. Bij de goal gaat één leven omlaag en verdwijnt de vijand.
-* Acceptatie:
-  Tien vijanden lopen van start naar de goal zonder vastlopers en verbruiken elk één leven.
-  Alle tien vijanden bereiken achtereenvolgens elk waypoint binnen één seconde na elkaar.
-
-### 11.1 Vijandbeweging over het pad
-
-* Keuze: go to a b c then to end
-* Risico: enemy can get stuck
-* Oplossing: set a range of when the enemy is at a point go to next
-* Acceptatie: 30 enemy's can walk over a point and all do dammage to the end
-
-
-
-### 11.2 Doel kiezen en schieten
-
-* Keuze: calculate where the balloon and the thorn should be and target there
-* Risico: the thorn is 100% precise
-* Oplossing: give a bit of randomness to where it shoots
-* Acceptatie: fire a shot 20 times and see how many make it. also the closer the piggy is the more accurate it should be
-
-### 11.3 Waves en spawnen
-
-* Keuze: spawn the balloons with a set dalay
-* Risico: i dont know
-* Oplossing:
-* Acceptatie:
-
-
-
-### 11.4 Economie en levens
-
-* Keuze: give the player money based on what type and how many enemys are killed
-* Risico:
-* Oplossing:
-* Acceptatie:
-
-### 11.5 UI basis
-
-* Keuze:
-* Risico:
-* Oplossing:
-* Acceptatie:
+* Choice: calculate where the balloon and the thorn should be and target there
+* Risk: the thorn is 100% precise
+* Solved: give a bit of randomness to where it shoots
+* Acceptable: fire a shot 20 times and see how many make it. also the closer the piggy is the more accurate it should be
