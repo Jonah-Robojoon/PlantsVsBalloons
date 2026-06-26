@@ -1,4 +1,4 @@
-Build: ![BUILD](Build)
+Build: <a href="/Build">Build</a>
 
 # Sprint 0 - Game Design Document : Tower Defense
 
